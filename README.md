@@ -1,6 +1,6 @@
 # SoundCheckEditor
-Unity Engine 내에서 필요한 사운드를 즉시 Freesound에서 검색하여 플레이할 수 있는 커스텀에디터
-Freesound : 저작권 무료 음원사이트. (https://freesound.org/)
+- Unity Engine 내에서 필요한 사운드를 즉시 Freesound에서 검색하여 플레이할 수 있는 커스텀에디터
+- Freesound : 저작권 무료 음원사이트. (https://freesound.org/)
 
 # 패키지 다운로드 링크
 https://drive.google.com/file/d/1F8qJMUQgJxh399z4ZgxFmvdOQGWK41ek/view?usp=drive_link
