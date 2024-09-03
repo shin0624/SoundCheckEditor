@@ -19,12 +19,12 @@ https://drive.google.com/file/d/1F8qJMUQgJxh399z4ZgxFmvdOQGWK41ek/view?usp=drive
 - System.Net.Http : HttpClient 사용을 위함
 - System.Threading.Tasks : 비동기 작업 처리를 위함
 
+# 개요
+1. 게임에는 많은 사운드가 필요한데, 작업할 때 마다 필요한 사운드를 찾는 과정이 너무 번거로웠다. AssetStore처럼, 음원 사이트도 에디터 내에서 접근할 수 있으면 편리성이 증대할 것이라 판단하여 사운드 체크 기능을 구현하였다.
+
 # 사용 시 유의
 - Json 데이터 처리를 위해 Newtonsoft json 3.2.1버전을 임포트해야 하는데, 오류가 발생하는 경우가 존재. 이럴 때는 asset폴더 내 plugin 폴더에 직접 Newtonsoft.json dll파일을 넣어주면 해결
 (패키지 매니저 이름으로 찾기에서 com.unity.nuget.newtonsoft-json 입력 후 3.2.1버전 다운로드) 혹은 구글에 Newtonsoft json 검색 후 다운로드 -> 프로젝트 환경에 dll 추가
-
-# 개요
-1. 게임에는 많은 사운드가 필요한데, 작업할 때 마다 필요한 사운드를 찾는 과정이 너무 번거로웠다. AssetStore처럼, 음원 사이트도 에디터 내에서 접근할 수 있으면 편리성이 증대할 것이라 판단하여 사운드 체크 기능을 구현하였다.
 
 # 기능
 1. 원하는 사운드를 검색한다. 입력한 쿼리는 Freesound 사이트로 요청되고, 검색 결과가 에디터 창에 출력된다. 원하는 사운드의 play버튼을 클릭하면 Freesound의 해당 사운드 페이지로 연결된다.
