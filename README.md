@@ -23,11 +23,11 @@ https://drive.google.com/file/d/1uJ7y2Jo4k8gwpsVRGpM7rKm6KBX5jjCj/view?usp=shari
 - System.Threading.Tasks : 비동기 작업 처리를 위함
 
 # 개요
-1. 게임에는 많은 사운드가 필요한데, 작업할 때 마다 필요한 사운드를 찾는 과정이 너무 번거로웠다. AssetStore처럼, 음원 사이트도 에디터 내에서 접근할 수 있으면 편리성이 증대할 것이라 판단하여 사운드 체크 기능을 구현하였다.
+1. 게임에는 많은 사운드가 필요한데, 작업할 때 마다 필요한 사운드를 찾는 과정이 너무 번거로웠다. AssetStore처럼 음원 사이트도 에디터 내에서 접근할 수 있으면 편리성이 증대할 것이라 판단하여 사운드 체크 기능을 구현하였다.
 
 # 사용 시 유의
-- Json 데이터 처리를 위해 Newtonsoft json 3.2.1버전을 임포트해야 하는데, 오류가 발생하는 경우가 존재. 이럴 때는 asset폴더 내 plugin 폴더에 직접 Newtonsoft.json dll파일을 넣어주면 해결
-(패키지 매니저 이름으로 찾기에서 com.unity.nuget.newtonsoft-json 입력 후 3.2.1버전 다운로드) 혹은 구글에 Newtonsoft json 검색 후 다운로드 -> 프로젝트 환경에 dll 추가
+- Json 데이터 처리를 위해 Newtonsoft json 3.2.1버전을 임포트(패키지 매니저 이름으로 찾기에서 com.unity.nuget.newtonsoft-json 입력 후 3.2.1버전 다운로드) 
+- 오류가 발생하는 경우, asset폴더 내 plugin 폴더에 직접 Newtonsoft.json dll파일을 넣어주면 해결
 
 # 기능
 1. 원하는 사운드를 검색한다. 입력한 쿼리는 Freesound 사이트로 요청되고, 검색 결과가 에디터 창에 출력된다. 원하는 사운드의 play버튼을 클릭하면 Freesound의 해당 사운드 페이지로 연결된다.
@@ -51,9 +51,9 @@ https://drive.google.com/file/d/1uJ7y2Jo4k8gwpsVRGpM7rKm6KBX5jjCj/view?usp=shari
  ![검색결과](https://github.com/user-attachments/assets/a27f5091-17c9-4450-a2e2-3577b9c64eee)
 
  ## 목록 중 원하는 사운드 Play 클릭 시 Freesound의 해당 음향효과 검색 결과창으로 이동
- ![사이트연결2](https://github.com/user-attachments/assets/52a40974-e112-42bd-acff-b751ba162b29)
+ ![사이트연결2](https://github.com/user-attachments/assets/e027c82e-bb06-4384-a036-1ac89f44fdc1)
 
- ## API키 오류 시(오류 조건 : 인증 오류 or 잘못된 접근)
+ ## API Key 오류 시(오류 조건 : 인증 오류 or 잘못된 접근)
  ![api키 에러시](https://github.com/user-attachments/assets/8f88e2ea-099e-4ca1-8351-3e988a6eec2c)
  ![에러 시 콘솔](https://github.com/user-attachments/assets/f55042a9-1939-42d7-97c1-dd15e9d134cd)
  
@@ -74,6 +74,9 @@ https://drive.google.com/file/d/1uJ7y2Jo4k8gwpsVRGpM7rKm6KBX5jjCj/view?usp=shari
 - 2024.09.05 Ver.2 : https://drive.google.com/file/d/1uJ7y2Jo4k8gwpsVRGpM7rKm6KBX5jjCj/view?usp=sharing
 
 # 업데이트 노트
+- Ver.1
+    1. Freesound API를 사용해 에디터 상에서 음향효과 목록을 검색하고 접근할 수 있는 기능 설계
+
 - Ver.2
     1. 매 프레임 호출되는 OnGUI의 비용 절감을 위해 EditorApplication.update를 이용해 상태기반 이벤트 처리 수행
     2. 페이지 넘기기 기능 추가 : Freesound의 next, previous응답을 사용하고, API 요청 시 Authorization 헤더를 포함하여 요청을 보냄. 
